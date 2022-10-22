@@ -17,6 +17,7 @@ export default nextAuth({
       clientSecret: process.env.GOOGLE_CLIENTSECRET as string
     })
   ],
+
   secret: process.env.SECRET,
   jwt: {
     secret: process.env.SECRET
