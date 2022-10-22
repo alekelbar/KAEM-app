@@ -1,3 +1,4 @@
+import { Button, Typography } from '@mui/material';
 import type { GetServerSideProps, NextPage } from 'next'
 import { Session } from 'next-auth'
 import { getSession } from 'next-auth/react'
@@ -14,17 +15,15 @@ const Home: NextPage = ({ session }: HomeProps) => {
   console.log(session);
   return (
     <div>
-
-
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+      <Typography variant='h1'>Hello World</Typography>
       <div>{session?.user?.name}</div>
       <div><p>{session?.user?.email}</p></div>
       <figure>
         <img src={session?.user?.image as string} alt="an image..." />
       </figure>
-      <button onClick={() => { signOut() }}>Sign out</button>
+      <Button onClick={() => { signOut() }} variant='contained'>
+        <Typography variant='body1'>sign Out</Typography>
+      </Button>
     </div>
   )
 }
