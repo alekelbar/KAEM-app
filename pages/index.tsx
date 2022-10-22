@@ -3,6 +3,7 @@ import { Session } from 'next-auth'
 import { getSession } from 'next-auth/react'
 import { signOut } from "next-auth/react";
 
+
 type HomeProps = {
   session?: Session
 }
@@ -13,6 +14,11 @@ const Home: NextPage = ({ session }: HomeProps) => {
   console.log(session);
   return (
     <div>
+
+
+      <h1 className="text-3xl font-bold underline">
+        Hello world!
+      </h1>
       <div>{session?.user?.name}</div>
       <div><p>{session?.user?.email}</p></div>
       <figure>

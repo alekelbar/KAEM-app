@@ -1,6 +1,5 @@
-import { Box } from '@mui/material'
-import Head from 'next/head'
 import React from 'react'
+import { Box } from '@mui/material'
 import SideBar from './SideBar'
 
 type LayoutProps = {
@@ -9,15 +8,15 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <Box>
-      <div>
+    <div>
+      <Box>
 
         <SideBar />
 
-      </div>
+      </Box>
 
       {children}
-    </Box>
+    </div>
   )
 }
 
