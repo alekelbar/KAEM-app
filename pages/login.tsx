@@ -1,7 +1,7 @@
 import { LockClockOutlined } from "@mui/icons-material";
 import { Box, Container, Grid, Paper } from "@mui/material";
 import { GetServerSideProps, NextPage } from "next";
-import { getSession, signIn } from "next-auth/react";
+import { getSession } from "next-auth/react";
 
 const Login: NextPage = () => {
 
